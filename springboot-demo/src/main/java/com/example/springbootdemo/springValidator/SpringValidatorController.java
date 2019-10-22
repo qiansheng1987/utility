@@ -1,15 +1,12 @@
 package com.example.springbootdemo.springValidator;
 
-import org.springframework.boot.context.properties.bind.validation.ValidationBindHandler;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.validation.Validator;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-import javax.validation.Validation;
 import java.util.List;
 
 /**
