@@ -1,10 +1,5 @@
 package com.qiansheng.javaaqs.reentrantLock;
 
-import org.junit.Test;
-
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -14,26 +9,46 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class client {
 
+	private static ReentrantLock lock  = new ReentrantLock();
+
 	public static void main(String[] args) {
-		AtomicInteger inc = new AtomicInteger();
-		inc.incrementAndGet();
+
+		Thread t1 = new Thread() {
+			@Override
+			public void run() {
+				executeTask();
+			}
+		};
+		t1.setName("t1");
+
+		Thread t2 = new Thread() {
+			@Override
+			public void run() {
+				executeTask();
+			}
+		};
+		t2.setName("t2");
+
+		t2.start();
+		t1.start();
+
+
 	}
 
-	@Test
-	public void testReentrantLock() {
-		ReentrantLock lock  = new ReentrantLock();
+	private static void executeTask() {
 		lock.lock();
 		try {
-			if (lock.tryLock(15, TimeUnit.SECONDS)) {
-				// 处理逻辑
-				System.out.println("获得锁.....");
+			if (Thread.currentThread().getName().equals("t1")) {
+				Thread.sleep(2000000000);
 			}
-		} catch (Exception e) {
+			System.out.println("线程："+Thread.currentThread().getName()+"执行线程任务");
+		}  catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			lock.unlock();
 		}
 	}
+
 
 }
 
