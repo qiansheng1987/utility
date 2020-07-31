@@ -22,8 +22,10 @@ public class MybatisDemo {
 		configuration.addMapper(BlogMapper.class);
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 		SqlSession sqlSession = sqlSessionFactory.openSession();
-		BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
-		System.out.println(JSON.toJSONString(mapper.selectBlog(1)));
+		Blog blog = sqlSession.selectOne("selectBlog", 1);
+		/*BlogMapper mapper = sqlSession.getMapper(BlogMapper.class);
+		System.out.println(JSON.toJSONString(mapper.selectBlog(1)));*/
+		System.out.println(JSON.toJSON(blog));
 	}
 
 	private static DataSource getDataSource() {
