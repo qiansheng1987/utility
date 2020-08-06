@@ -1,13 +1,13 @@
-package com.qiansheng;
+package com.qiansheng.sharespringbootstarter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class QsSpringbootStarterApplication {
+public class ShareSpringBootStarterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(QsSpringbootStarterApplication.class, args);
+		SpringApplication.run(ShareSpringBootStarterApplication.class, args);
 	}
 
 }

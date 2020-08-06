@@ -52,6 +52,13 @@
             <artifactId>spring-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--引入自定义的spring boot starter-->
+        <dependency>
+            <groupId>com.qiansheng</groupId>
+            <artifactId>share-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

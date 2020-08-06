@@ -1,10 +1,10 @@
-package com.qiansheng;
+package com.qiansheng.sharespringbootstarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class QsSpringbootStarterApplicationTests {
+class ShareSpringBootStarterApplicationTests {
 
 	@Test
 	void contextLoads() {
