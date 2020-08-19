@@ -1,0 +1,2 @@
+email=spi.dubbospi.EmailMessageService
+sms=spi.dubbospi.SmsMessageService
