@@ -1,5 +1,6 @@
 package spi.dubbospi;
 
+import com.alibaba.dubbo.common.URL;
 import com.alibaba.dubbo.common.extension.ExtensionLoader;
 
 /**
@@ -12,9 +13,30 @@ public class Client {
 
 	public static void main(String[] args) {
 		ExtensionLoader<MessageService> extensionLoader = ExtensionLoader.getExtensionLoader(MessageService.class);
-		MessageService email = extensionLoader.getExtension("email");
+
+		/*MessageService email = extensionLoader.getExtension("email");
 		email.sendMsg("dubbo spi email send msg");
 		MessageService sms = extensionLoader.getExtension("sms");
-		sms.sendMsg("dubbo spi sms send");
+		sms.sendMsg("dubbo spi sms send");*/
+
+		URL url = URL.valueOf("dubbo://localhost/dubbo?messageKey=sms");
+		MessageService adaptiveExtension = extensionLoader.getAdaptiveExtension();
+		adaptiveExtension.sendMsg(url,"qiansheng");
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

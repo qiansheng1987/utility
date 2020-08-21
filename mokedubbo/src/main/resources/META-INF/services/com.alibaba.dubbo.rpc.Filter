@@ -1,0 +1,3 @@
+test1 = spi.dubbospi.activate.Test1Filter
+test2 = spi.dubbospi.activate.Test2Filter
+test3 = spi.dubbospi.activate.Test3Filter
