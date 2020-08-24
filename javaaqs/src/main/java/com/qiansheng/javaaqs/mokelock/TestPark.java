@@ -19,8 +19,6 @@ public class TestPark {
 		Thread t2 = new Thread( () -> {testSync();});
 		t2.setName("t2");
 		t2.start();
-
-
 	}
 
 	public static void testSync() {
