@@ -10,7 +10,7 @@ import java.util.Map;
  * @author 1987qiansheng@gmail.com
  * @date 2020/8/717:01
  */
-public class Client {
+public class ThreeSum {
 
 	public static void main(String[] args) {
 		int[] nums = new int[] {3,2,4};
