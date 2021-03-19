@@ -6,6 +6,10 @@ import java.util.*;
  * 描述:一致性hash
  * 	@link https://juejin.im/post/5ae1476ef265da0b8d419ef2
  *
+ *
+ * 	一致性hash
+ *
+ *
  * @author sheng.qian01@ucarinc.com
  * @version V1.0
  * @date 2019/9/27 15:15

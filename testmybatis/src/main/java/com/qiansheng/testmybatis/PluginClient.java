@@ -3,6 +3,9 @@ package com.qiansheng.testmybatis;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 定义代理植入点，
+ */
 interface Inteceptor {
 	Object plugin(Object target);
 }
