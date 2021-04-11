@@ -12,6 +12,7 @@
         <module>algorithm</module>
         <module>share</module>
         <module>jdkapply</module>
+        <module>design-pattern</module>
     </modules>
 
     <dependencies>

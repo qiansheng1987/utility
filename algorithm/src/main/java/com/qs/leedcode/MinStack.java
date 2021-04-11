@@ -27,8 +27,8 @@ public class MinStack {
 
 	/** initialize your data structure here. */
 	public MinStack() {
-		stack = new ArrayDeque<>();
-		minStack = new ArrayDeque<>();
+		stack = new ArrayDeque<Integer>();
+		minStack = new ArrayDeque<Integer>();
 	}
 
 	public void push(int x) {
